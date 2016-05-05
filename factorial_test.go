@@ -5,18 +5,21 @@ import (
 )
 
 type TestHelper struct {
-	input []int{1,3,7}
-	expectations []int{1,6,5040}
+	input []int
+	expectations []int
 }
 
 func TestCalculateFactorial(t *testing.T) {
-	helper := new (TestHelper)
+	helper := TestHelper {
+		input: []int {1, 3, 7},
+		expectations: []int {1, 6, 5040},
+	}
 
 	for index, value := range helper.input {
-		fn := CalculateFactorial(value)
+		result := CalculateFactorial(value)
 
-		if val := fn(); val != helper.ex {
-			t.Fatalf("Expected %d, got %", helper)
+		if result != helper.expectations[index] {
+			t.Fatalf("Expected %d, got %d", helper.expectations[index], result)
 		}
 	}
 
