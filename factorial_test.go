@@ -5,14 +5,14 @@ import (
 )
 
 type TestHelper struct {
-	input []int
+	input        []int
 	expectations []int
 }
 
 func TestCalculateFactorial(t *testing.T) {
-	helper := TestHelper {
-		input: []int {1, 3, 7},
-		expectations: []int {1, 6, 5040},
+	helper := TestHelper{
+		input:        []int{1, 3, 7},
+		expectations: []int{1, 6, 5040},
 	}
 
 	for index, value := range helper.input {
