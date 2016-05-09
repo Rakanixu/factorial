@@ -1,6 +1,6 @@
 package factorial
 
-func CalculateFactorial(factorial int) int {
+func CalculateFactorial(factorial int32) int32 {
 	if factorial > 0 {
 		return CalculateFactorial(factorial-1) * factorial
 	}
